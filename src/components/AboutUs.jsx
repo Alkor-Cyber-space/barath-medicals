@@ -2,8 +2,8 @@ import React from 'react';
 import { CircleCheckBig } from 'lucide-react';
 import image from '../assets/playicon.png'
 import cover from '../assets/cover.png'
-import vector from '../assets/vector.png'
-import vector2 from '../assets/vector2.png'
+import vector from '../assets/Vector.png'
+import vector2 from '../assets/Vector2.png'
 import image1 from '../assets/image1.png'
 import image2 from '../assets/image2.png'
 import image3 from '../assets/image3.png'
