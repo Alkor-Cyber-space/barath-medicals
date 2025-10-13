@@ -21,30 +21,26 @@ const Form = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios(
-        "https://script.google.com/macros/s/AKfycbzgBwMPGzD_qbu0pB38WDbdpV3qRL6itIHpNc3YmRu1_cuz2YjC_NccDjSxDGAxuTIT/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+  e.preventDefault();
 
-      const data = await response.json();
-      if (data.result === "success") {
-        setResponseMsg("Form submitted successfully!");
-      } else {
-        setResponseMsg("Something went wrong.");
+  const formData = new FormData(e.target);
+
+  try {
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbzgBwMPGzD_qbu0pB38WDbdpV3qRL6itIHpNc3YmRu1_cuz2YjC_NccDjSxDGAxuTIT/exec",
+      {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",
       }
-    } catch (error) {
-      console.error("Error:", error);
-      setResponseMsg("Error submitting form.");
-    }
-  };
+    );
+
+    alert("Form submitted successfully!");
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("Submission failed.");
+  }
+};
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-12">
