@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import video from '../assets/video.mp4'
+import video from '../assets/vid.mp4'
 import logo from '../assets/logo.jpg'
 import icon from '../assets/icon-arrorw.png'
 import { Play, CheckCircle2, MapPin } from 'lucide-react';
@@ -49,7 +49,7 @@ export default function Home() {
     
                                     </div>
                                     <span className="text-white group-hover:hidden transition-all duration-300 ">
-                                        Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consect
+                                        Every day we bring hope to millions of children in the world's   hardest places as a sign of God's unconditional love.
                                     </span>                               
                                     <span className="absolute right-2 opacity-0 translate-x-[-30px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-out">
                                         Explore Now
