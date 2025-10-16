@@ -29,27 +29,18 @@ const handleSubmit = (e) => {
   const url =
     "https://script.google.com/macros/s/AKfycby7ZbmcCQgjvVNEmAu5XOxz9vXlO7rstajFcRJs1j7-GohDodoiBC77QWTnR7i6MG7B/exec";
 
-  const formBody = new URLSearchParams({
-    name: formData.name,
-    address: formData.address,
-    pincode: formData.pincode,
-    contact_no: formData.contact_no,
-    mail_id: formData.mail_id,
-    preference_store_location: formData.preference_store_location,
-    previous_pharma_experience: formData.previous_pharma_experience,
-    interested_in: formData.interested_in,
-    investment_amount: formData.investment_amount,
-  }).toString();
+  // Use FormData instead of URLSearchParams
+  const formDataToSend = new FormData();
+  Object.entries(formData).forEach(([key, value]) => {
+    formDataToSend.append(key, value);
+  });
 
   fetch(url, {
     method: "POST",
-    mode: "no-cors", // 👈 important for Google Apps Script
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: formBody,
+    mode: "no-cors", // required for Google Apps Script
+    body: formDataToSend, // no headers — FormData handles it automatically
   })
-    .then(() => { 
+    .then(() => {
       alert("Form submitted successfully!");
       setFormData({
         name: "",
