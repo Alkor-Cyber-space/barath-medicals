@@ -27,7 +27,7 @@ const handleSubmit = (e) => {
   e.preventDefault();
 
   const url =
-    "https://script.google.com/macros/s/AKfycbxF_AVpTyFpS-bRkU5PpZV02xWRCzQMDcxjtPZojbfdr1z4irC3rZ3ZyFWdklVq8M1e/exec";
+    "https://script.google.com/macros/s/AKfycby7ZbmcCQgjvVNEmAu5XOxz9vXlO7rstajFcRJs1j7-GohDodoiBC77QWTnR7i6MG7B/exec";
 
   const formBody = new URLSearchParams({
     name: formData.name,
