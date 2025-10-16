@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { CircleCheckBig } from "lucide-react";
-import image from "../assets/playicon1.png";
+import image from "../assets/playicon1.jpg";
 import cover from "../assets/cover.png";
 import vector from "../assets/Vector.png";
 import vector2 from "../assets/Vector2.png";
