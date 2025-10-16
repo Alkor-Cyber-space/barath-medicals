@@ -36,7 +36,7 @@ export default function Home() {
 
                     {/* Hero Text + CTA (Left aligned) */}
                     <div className="flex flex-1 items-center justify-start px-4 sm:px-10 md:px-16">
-                        <div className="text-left max-w-3xl space-y-8">
+                        <div className="text-left max-w-3xl py-40 space-y-8">
                             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight">
                                 Bringing health
                                 <br />
@@ -57,19 +57,17 @@ export default function Home() {
                                         />
                                     </div>
 
-                                    {/* Main Text */}
-                                    <span className="text-sm sm:text-base hidden sm:inline-flex group-hover:hidden transition-all duration-300 max-w-xs text-left">
+                                    {/* Long text (only visible before hover) */}
+                                    <span className="text-sm sm:text-base hidden sm:inline-flex transition-all duration-300 max-w-xs text-left group-hover:opacity-0 group-hover:translate-x-[-10px]">
                                         Every day we bring hope to millions of children in the world's hardest places as a sign of God's unconditional love.
                                     </span>
 
-                                    {/* Hover Text */}
-                                    <span className="absolute right-4 text-base sm:text-lg opacity-0 translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-out">
+                                    {/* Explore Now (only visible on hover) */}
+                                    <a href="#form" className="scroll-smooth"><span className="absolute left-20 sm:left-24 md:left-28 lg:left-29 text-base sm:text-lg mt-[-10px] opacity-0 translate-x-[-15px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-out whitespace-nowrap">
                                         Explore Now
-                                    </span>
-
-                                    {/* Hidden Placeholder for Consistent Width */}
-                                    <span className="invisible sm:visible">Explore Now</span>
+                                    </span></a>
                                 </button>
+
                             </div>
                         </div>
                     </div>

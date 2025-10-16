@@ -123,7 +123,7 @@ const Form = () => {
             enquire for more details — we’re happy to help.
           </p>
 
-          <form className="space-y-4" onSubmit={handleSubmit}>
+          <form className="space-y-4" onSubmit={handleSubmit} id="form">
             <input
               type="text"
               name="name"
