@@ -8,7 +8,9 @@ export default {
         sans: ['Michroma', 'sans-serif'],
       },
     },
-    plugins: [require('tailwind-scrollbar')],
+    plugins: [
+    require('tailwind-scrollbar-hide'),
+  ],
 
   },
 };

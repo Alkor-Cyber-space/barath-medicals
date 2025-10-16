@@ -1,17 +1,16 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import video from '../assets/vid.mp4'
-import logo from '../assets/logo.jpg'
-import icon from '../assets/icon-arrorw.png'
-import { Play, CheckCircle2, MapPin } from 'lucide-react';
+import video from '../assets/vid.mp4';
+import logo from '../assets/logo.jpg';
+import icon from '../assets/icon-arrorw.png';
 import AboutUs from '../components/AboutUs';
 import Form from '../components/Form';
 
 export default function Home() {
     return (
-       <>
-            <div className="relative w-full h-screen overflow-hidden">
-                {/* Background Image - Replace src with your actual image */}
+        <>
+            {/* ---------- HERO SECTION ---------- */}
+            <div className="relative w-full min-h-screen overflow-hidden">
+                {/* Background Video */}
                 <div className="absolute inset-0 z-0">
                     <video
                         src={video}
@@ -21,57 +20,72 @@ export default function Home() {
                         playsInline
                         className="w-full h-full object-cover"
                     />
-                        <div className="absolute inset-0 bg-black/60 bg-opacity-50"></div>
+                    <div className="absolute inset-0 bg-black/60"></div>
                 </div>
-    
-                <div className="relative z-10  ">
-                    <div className="h-15 w-50 mx-10 mt-12 p-1 ">
-                        <img src={logo} className='h-full w-full rounded-xl' alt="" />
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col h-full">
+                    {/* Logo */}
+                    <div className="p-4 sm:p-6 md:p-10">
+                        <img
+                            src={logo}
+                            className="h-12 sm:h-14 md:h-16 w-auto rounded-xl"
+                            alt="Bharath Medplus Logo"
+                        />
                     </div>
-    
-                    <div className="flex-1 flex items-center ">
-                        <div className="max-w-3xl mt-19 p-15">
-                            <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold text-white leading-tight">
-                                Bringing health<br />
-                                <span className='text-5xl font-medium'>
-                                    to life for the whole family
+
+                    {/* Hero Text + CTA (Left aligned) */}
+                    <div className="flex flex-1 items-center justify-start px-4 sm:px-10 md:px-16">
+                        <div className="text-left max-w-3xl space-y-8">
+                            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight">
+                                Bringing health
+                                <br />
+                                <span className="text-2xl sm:text-3xl md:text-5xl font-medium">
+                                    to life for the whole family.
                                 </span>
                             </h1>
-                            <div className="flex items-center mt-15 ml-3">
-                                <button className="relative flex items-center gap-2 overflow-hidden rounded-full   py-3.5 text-white font-medium hover:bg-[#024A3E] group transition-all duration-500 hover:pl-5 hover:pr-12">
+
+                            {/* CTA Button */}
+                            <div className="flex justify-start mt-6 sm:mt-10">
+                                <button className="relative flex items-center gap-3 overflow-hidden rounded-full bg-transparent py-3.5 px-6 sm:px-10 text-white font-medium border border-white hover:bg-[#024A3E] transition-all duration-500 group">
                                     {/* Icon */}
-                                    <div className="flex items-center justify-center h-14 w-21 rounded-full bg-white/10 transition-all duration-500 group-hover:translate-x-[-5px] group-hover:rotate-45">
+                                    <div className="flex items-center justify-center h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-white/10 transition-all duration-500 group-hover:-translate-x-1 group-hover:rotate-45">
                                         <img
                                             src={icon}
-                                            alt=""
-                                            className="h-full w-full object-cover transition-transform duration-300  group-hover:scale-105  "
+                                            alt="Play Icon"
+                                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
-    
                                     </div>
-                                    <span className="text-white group-hover:hidden transition-all duration-300 ">
-                                        Every day we bring hope to millions of children in the world's   hardest places as a sign of God's unconditional love.
-                                    </span>                               
-                                    <span className="absolute right-2 opacity-0 translate-x-[-30px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-out">
+
+                                    {/* Main Text */}
+                                    <span className="text-sm sm:text-base hidden sm:inline-flex group-hover:hidden transition-all duration-300 max-w-xs text-left">
+                                        Every day we bring hope to millions of children in the world's hardest places as a sign of God's unconditional love.
+                                    </span>
+
+                                    {/* Hover Text */}
+                                    <span className="absolute right-4 text-base sm:text-lg opacity-0 translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-out">
                                         Explore Now
                                     </span>
-    
-                                    {/* Default hidden placeholder to keep button width consistent */}
-                                    <span className="invisible">Explore Now</span>
+
+                                    {/* Hidden Placeholder for Consistent Width */}
+                                    <span className="invisible sm:visible">Explore Now</span>
                                 </button>
                             </div>
-    
-    
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            {/* ---------- ABOUT US SECTION ---------- */}
             <section>
-                <AboutUs/>
+                <AboutUs />
             </section>
+
+            {/* ---------- ENQUIRY FORM SECTION ---------- */}
             <section>
-                <Form/>
+                <Form />
             </section>
-            
-       </>
+        </>
     );
 }
