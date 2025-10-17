@@ -30,27 +30,27 @@ export default function AboutUs() {
     };
 
     const branches = [
-        {
-            image: image1,
-            title: "Pondicherry",
-            address: "No.: 26 Marie Oulgaret Main Road, Ganapathy Nagar",
-        },
-        {
-            image: image2,
-            title: "Palakkad",
-            address: "283, Krishna Complex, Marutharoad, Kootupatha, Palakkad",
-        },
-        {
-            image: image3,
-            title: "Karur",
-            address: "No.70/10 Pon Nagar, Thanthonimalai Post, Karur 6390005",
-        },
-        {
-            image: image5,
-            title: "Kollam",
-            address: "VI/1130, 1133, Mayanadu road, Kottayam, Kollam - 691571",
-        },
-    ];
+            {
+                image: image1,
+                title: "Pondicherry",
+                address: "26 Marie Oulagaret Main Road, Ganapathy Nagar, Oulagaret, Pondicherry-505010",
+            },
+            {
+                image: image2,
+                title: "Palakkad",
+                address: "7/815, 7/816, 1st Floor Krishna Complex, Marutha Road (P.O.) Palakkad - 678007",
+            },
+            {
+                image: image3,
+                title: "Karur",
+                address: "No.70/10 Pon Nagar, Thanthonimalai Post, Karur 639005",
+            },
+            {
+                image: image5,
+                title: "Kollam",
+                address: "VI/1130, 1133, Mayanadu road, Kottiyam, Kollam - 691571",
+            },
+        ];
 
     return (
         <div className="min-h-screen bg-gray-50 py-6 sm:py-9">
