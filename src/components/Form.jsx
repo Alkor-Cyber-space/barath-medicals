@@ -32,7 +32,7 @@ const Form = () => {
     setIsSubmitted(false);
 
     const url =
-      "https://script.google.com/macros/s/AKfycbxDoXL7VJ0EpfuBjX_1ctzmgwcLs3-O6hRNHIxPaMtwqWDUj7TuNd4LPy2tdbl2VIfGpw/exec";
+      "https://script.google.com/macros/s/AKfycbz3dGMppSJWvBoNZCSbK46oMgLIJjac4tk0LEtk4SSdkWcnT0ceF4OCGVeoJjSBgn1aHg/exec";
 
     const formDataToSend = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
