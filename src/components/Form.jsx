@@ -174,28 +174,37 @@ const Form = () => {
               required
             />
 
-            {[
-              {
-                name: "preference_store_location",
-                placeholder: "Preferred Store Location",
-              },
-              {
-                name: "previous_pharma_experience",
-                placeholder: "Previous Pharma Experience (if any)",
-              },
-              { name: "interested_in", placeholder: "Interested In" },
-            ].map((field) => (
-              <input
-                key={field.name}
-                type="text"
-                name={field.name}
-                value={formData[field.name]}
-                onChange={handleChange}
-                placeholder={field.placeholder}
-                className="w-full border-b border-gray-300 p-3 focus:ring-1 focus:ring-[#024A3E] focus:outline-none"
-              />
-            ))}
+            <input
+              type="text"
+              name="preference_store_location"
+              value={formData.preference_store_location}
+              onChange={handleChange}
+              placeholder="Preferred Store Location"
+              className="w-full border-b border-gray-300 p-3 focus:ring-1 focus:ring-[#024A3E] focus:outline-none"
+            />
 
+            <input
+              type="text"
+              name="previous_pharma_experience"
+              value={formData.previous_pharma_experience}
+              onChange={handleChange}
+              placeholder="Previous Pharma Experience (if any)"
+              className="w-full border-b border-gray-300 p-3 focus:ring-1 focus:ring-[#024A3E] focus:outline-none"
+            />
+
+            {/* Dropdown for Interested In */}
+            <select
+              name="interested_in"
+              value={formData.interested_in}
+              onChange={handleChange}
+              className="w-full border-b border-gray-300 p-3 bg-white focus:ring-1 focus:ring-[#024A3E] focus:outline-none"
+              required
+            >
+              <option value="">Select Interest</option>
+              <option value="Franchisee">Franchisee</option>
+              <option value="Channel Partner">Channel Partner</option>
+            </select>
+            
             <input
               type="number"
               name="investment_amount"
@@ -223,19 +232,19 @@ const Form = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700 text-sm sm:text-base">
               <div>
                 <p className="font-medium">Pondicherry</p>
-                <p>No.: 26 Marie Oulgaret Main Road, Ganapathy Nagar</p>
+                <p>26 Marie Oulagaret Main Road, Ganapathy Nagar, Oulagaret, Pondicherry-505010</p>
               </div>
               <div>
                 <p className="font-medium">Palakkad</p>
-                <p>283, Krishna Complex, Marutharoad, Kootupatha, Palakkad</p>
+                <p>7/815, 7/816, 1st Floor Krishna Complex, Marutha Road (P.O.) Palakkad - 678007</p>
               </div>
               <div>
-                <p className="font-medium">Chennai</p>
-                <p>No.157e10, M.T.H. Road, Ambattur Tamil Nadu 600049</p>
+                <p className="font-medium">Kollam</p>
+                <p>VI/1130, 1133, Mayanadu road, Kottiyam, Kollam - 691571</p>
               </div>
               <div>
                 <p className="font-medium">Karur</p>
-                <p>No.70/10 Pon Nagar, Thanthonimalai Post, Karur 6390005</p>
+                <p>No.70/10 Pon Nagar, Thanthonimalai Post, Karur 639005</p>
               </div>
             </div>
           </div>
